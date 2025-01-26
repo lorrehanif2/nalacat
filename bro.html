@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>$NALA</title>
+        <meta
+          name="description"
+          content="The cutest dog nala, is going to a nala." />
+        <link rel="canonical" href="index.html" />
+        <link rel="shortlink" href="index.html" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <meta property="og:url" content="https://nalasol.lol/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="$NALA" />
+        <meta
+          property="og:description"
+          content="The cutest dog nala, is going to a nala." />
+        <meta property="og:image" content="/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="nalasol.lol/" />
+        <meta property="twitter:url" content="https://nalasol.lol/" />
+        <meta name="twitter:title" content="$NALA" />
+        <meta
+          name="twitter:description"
+          content="The cutest dog nala, is going to a nala." />
+        <meta name="twitter:image" content="/preview.png" />
+  </head>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var audioElem = document.getElementById("myAudio");
+          audioElem.pause();
+          audioElem.muted = true;
+          audioElem.volume = 0;
+  
+          function updateMuteButtonText() {
+            var muteBtn = document.getElementById("muteButton");
+            muteBtn.textContent = audioElem.muted ? "SONG" : "MUTE";
+          }
+  
+          function fadeInVolume(targetVolume, duration) {
+            var volumeStep = targetVolume / (duration / 100);
+            var currentVolume = audioElem.volume;
+            var fadeInterval = setInterval(function () {
+              currentVolume += volumeStep;
+              if (currentVolume >= targetVolume) {
+                audioElem.volume = targetVolume;
+                clearInterval(fadeInterval);
+              } else {
+                audioElem.volume = currentVolume;
+              }
+            }, 100);
+          }
+  
+          function toggleMute() {
+            if (audioElem.muted) {
+              audioElem.muted = false;
+              audioElem
+                .play()
+                .then(() => {
+                  fadeInVolume(0.1, 5000);
+                })
+                .catch((e) => console.error("Playback failed:", e));
+            } else {
+              audioElem.muted = true;
+              audioElem.pause();
+              audioElem.volume = 0;
+            }
+            updateMuteButtonText();
+          }
+  
+          var muteBtn = document.getElementById("muteButton");
+          muteBtn.addEventListener("click", toggleMute);
+  
+          updateMuteButtonText();
+        });
+      </script>
+
+  <body>
+
+       <audio id="myAudio" autoplay loop>
+        <source src="nala.mp3" type="audio/mpeg" />
+      </audio>
+
+    <div class="hearthands" id="object1"></div>
+    <div class="doubleheart" id="object2"></div>
+    <div class="growingheart" id="object3"></div>
+    <div class="stars" id="object4"></div>
+    <div class="sparkleheart" id="object5"></div>
+    <div class="heartsmile" id="object6"></div>
+    <div class="paws" id="object7"></div>
+    <div class="pinch" id="object8"></div>
+    <div class="blueheart" id="object9"></div>
+    <div class="bone" id="object10"></div>
+
+    <div class="navigation-bar">
+      <a class="link"
+        href="https://raydium.io/swap/?inputMint=sol&amp;outputMint=3B5wuUrMEi5yATD7on46hKfej3pfmd7t1RKgrsN3pump"
+        >BUY</a
+      >
+      <a class="link" href="https://linktr.ee/NalaNeverLoveUFirst">LINKS</a>
+      <a class="link" href="">About</a>
+      <a class="link" onclick="toggleMute()" id="muteButton">UNMUTE</a>
+      
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <div style="margin-top: 20px;"></div>
+    <div class="container">
+        <div class="content-text">
+            <p style="padding-top: 128px;">Nala Never Love U First</p>
+          </div> 
+    </div>
+    <div class="container">
+        <div class="content-text">
+            <p></p>
+          </div>
+          
+        <div class="horizontal-container">
+            <a href=""><img src="nala1.png" id="slideshow" class="meme" /></a>
+        </div>  
+    </div>
+    <div class="content-text">
+      <p>
+        $NALA is the most popular cat in the world. We Bring Back the Real Meta Meme. 
+      </p>
+      
+    </div>
+
+    <a href="">
+      <div class="button"><span>BUY SOME $NALA!</span></div>
+    </a>
+  
+
+    <div class="ca-text">
+      <p>
+        CA : 
+      </p>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="externals">
+        <a href="https://t.me/+Ahut77e8diI2YTdl" target="_blank"
+          ><div class="square">
+            <img src="telegram.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a href="https://x.com/Nalacat1474886" target="_blank"
+          ><div class="square">
+            <img src="x.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a
+          href=""
+          target="_blank"
+          ><div class="square">
+            <img src="pumpfun.png" alt="logo" class="logo" /></div
+        ></a>
+        <a
+        href=""
+        target="_blank"
+        ><div class="square">
+          <img src="dexscreener.svg" alt="logo" class="logo" /></div
+      ></a>
+      </div>
+      <div class="externals">
+        </div
+      ></a>
+      
+      </div>
+  </div>
+  <div class="ca-text">
+    <p>Tokenomics</p>
+    <img src="nala.png" class="" />
+  </div>
+
+  <br><br><br>
+  
+  <script>
+    const images = [
+      "nala1.png",
+      "nala2.png",
+      "nala3.png",
+      "nala4.png",
+      ];
+
+    let currentImageIndex = 0;
+    const slideshowElement = document.getElementById("slideshow");
+
+    function changeImage() {
+      slideshowElement.classList.add("fade-out");
+
+      setTimeout(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        slideshowElement.src = images[currentImageIndex];
+        slideshowElement.classList.remove("fade-out");
+        slideshowElement.classList.add("fade-in");
+      }, 1000);
+    }
+
+    setInterval(changeImage, 3000);
+
+    slideshowElement.classList.add("fade-in");
+  </script>
+  <div class="content-text"></div>
+  </body>
+</html>

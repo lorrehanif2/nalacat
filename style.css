@@ -1,0 +1,203 @@
+/* Style untuk halaman loader */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;  /* Mengubah font ke Comic Sans MS */
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+}
+
+.loader-icon img {
+    width: 15vw;
+    height: auto;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-progress {
+    width: 80%;
+    max-width: 400px;
+    height: 10px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: yellow;
+    transition: width 0.1s;
+}
+
+/* Style untuk menu container */
+/* Style untuk background di belakang menu */
+#background-behind-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bg.png'); /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Pastikan berada di belakang menu */
+}
+
+/* Style untuk menu container */
+#menu-container {
+    position: sticky; /* Menu tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 1000;
+    width: 80%;
+    max-width: 900px; /* Membatasi lebar maksimum */
+    margin: 0 auto; /* Memusatkan menu secara horizontal */
+    padding: 12px 20px;
+    background-color: #25B9F9; /* Background menu */
+    border: 5px solid white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between; /* Konten di dalam menu tersebar */
+    align-items: center; /* Konten vertikal rata tengah */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Menu logo */
+#menu .logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Menu Items - Menghapus kotak dari menu */
+.menu-items {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items li {
+    margin: 0;
+}
+
+.menu-items a {
+    text-decoration: none;
+    font-size: 18px;
+    background: none; /* Menghapus background */
+    color: white; /* Menambahkan warna teks */
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.menu-items a:hover {
+    color: #f8b400; /* Warna saat hover */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #25B9F9;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: white;
+}
+
+/* Style untuk setiap section - Hapus border dan background */
+.section {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: transparent; /* Hapus background */
+    border: none; /* Hapus border */
+    font-size: 20px;
+    color: #333;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f8b400;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-items a {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    #menu .logo img {
+        width: 40px;
+    }
+
+    .button-container button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-items a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    #menu .logo img {
+        width: 30px;
+    }
+
+    .button-container button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
